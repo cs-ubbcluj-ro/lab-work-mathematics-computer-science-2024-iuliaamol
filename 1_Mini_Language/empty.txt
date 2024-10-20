@@ -15,7 +15,7 @@ Language Specification:
  2. Lexic:
     a. Operators : +,-,*,/, =,>=,<=,<,>,!=
     b. Separators : ;,:,{},[]
-    c. Reserved Words : var, int, bool, IF, ELSE, WHILE, read, write, begin, end, program
+    c. Reserved Words : var, int, bool, IF, WHILE, read, write, begin, end, program
     d. Identifiers : sequence of letters (a-z) and digits (0-9), where the first character must be a letter.
                 identifier ::= letter {letter | digit}
                 letter ::= "a" | "b" | "c" | ... | "z"
@@ -37,7 +37,7 @@ Language Specification:
     stmt ::= assignment | iostmt | ifstmt | whilestmt
     assignment ::= identifier ":=" expression ";"
     iostmt ::= "read" "(" identifier ")" ";" | "write" "(" expression ")" ";"
-    ifstmt ::= "IF" "(" condition ")" "begin" stmtlist "end" ["ELSE" "begin" stmtlist "end"]
+    ifstmt ::= "IF" "(" condition ")" "begin" stmtlist "end" 
     condition ::= expression relational_op expression
     relational_op ::= "=" | "!=" | "<" | "<=" | ">" | ">="
     whilestmt ::= "WHILE" "(" condition ")" "begin" stmtlist "end"
