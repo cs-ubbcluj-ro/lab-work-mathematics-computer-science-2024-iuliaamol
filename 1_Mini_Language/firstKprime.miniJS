@@ -3,6 +3,7 @@ program primePrinter
     var count : int;
     var num : int;
     var isPrime : bool;
+    var i : int;
     
     read(k);
     
@@ -12,7 +13,7 @@ program primePrinter
     WHILE (count < k) begin
         isPrime := true;
 
-        var i : int;
+       
         i := 2;
         
         WHILE (i * i <= num)
