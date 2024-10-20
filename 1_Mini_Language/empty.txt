@@ -43,7 +43,7 @@ Language Specification:
     whilestmt ::= "WHILE" "(" condition ")" "begin" stmtlist "end"
 #expressions
     expression ::=term |  expresion "+" term | expression "-" term
-    term ::= factor | term "*" factor | term "/" factor
+    term ::= factor | term "*" factor | term "%" factor
     factor :: identifier | number_const | bool_const | "(" expression ")"
 
 
