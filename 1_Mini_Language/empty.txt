@@ -1,0 +1,66 @@
+#miniJS language specification
+
+Language Specification:
+
+ 1 .Language Definition:
+
+  1.1 Alphabet:
+
+  1.1.a. Upper (A-Z) and lower case letters (a-z) of the English alphabet
+
+      b. Underline character '_';
+
+      c. Decimal digits (0-9);
+
+ 2. Lexic:
+    a. Operators : +,-,*,/, =,>=,<=,<,>,!=
+    b. Separators : ;,:,{},[]
+    c. Reserved Words : var, int, bool, IF, ELSE, WHILE, read, write, begin, end, program
+    d. Identifiers : sequence of letters (a-z) and digits (0-9), where the first character must be a letter.
+                identifier ::= letter {letter | digit}
+                letter ::= "a" | "b" | "c" | ... | "z"
+                digit ::= "0" | "1" | ... | "9"
+    e. Constants : non-negative integer and boolean
+                number_const ::= digit {digit}
+                bool_const ::= "true" | "false"
+
+ 3. Sintax
+    program ::="program" identifier declist stmtlist "end"
+              -declist is a list of variable declarations
+              -smtmtlist is a seq of statements
+#variable declaration
+    declist ::= declaration | declaration ";" declist
+    declaration ::= "var" identifier ":" type
+    type ::="int" |"bool"
+#statements
+    stmtlist ::= stmt | stmt ";" stmtlist
+    stmt ::= assignment | iostmt | ifstmt | whilestmt
+    assignment ::= identifier ":=" expression ";"
+    iostmt ::= "read" "(" identifier ")" ";" | "write" "(" expression ")" ";"
+    ifstmt ::= "IF" "(" condition ")" "begin" stmtlist "end" ["ELSE" "begin" stmtlist "end"]
+    condition ::= expression relational_op expression
+    relational_op ::= "=" | "!=" | "<" | "<=" | ">" | ">="
+    whilestmt ::= "WHILE" "(" condition ")" "begin" stmtlist "end"
+#expressions
+    expression ::=term |  expresion "+" term | expression "-" term
+    term ::= factor | term "*" factor | term "/" factor
+    factor :: identifier | number_const | bool_const | "(" expression ")"
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+               
