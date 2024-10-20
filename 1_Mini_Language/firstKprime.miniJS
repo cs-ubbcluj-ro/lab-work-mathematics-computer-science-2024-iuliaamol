@@ -1,1 +1,36 @@
+program primePrinter
+    var k : int;
+    var count : int;
+    var num : int;
+    var isPrime : bool;
+    
+    read(k);
+    
+    count := 0;
+    num := 2;
+    
+    WHILE (count < k) begin
+        isPrime := true;
+
+        var i : int;
+        i := 2;
+        
+        WHILE (i * i <= num)
+        begin
+            IF (num % i = 0)
+            begin
+                isPrime := false;
+            end;
+            i := i + 1;
+        end;
+        
+        IF (isPrime = true)
+        begin
+            write(num);
+            count := count + 1;
+        end;
+        
+        num := num + 1;
+    end;
+end
 
