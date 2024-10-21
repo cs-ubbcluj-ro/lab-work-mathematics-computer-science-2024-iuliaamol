@@ -48,7 +48,7 @@ Language Specification:
 
 
 #user defined type
-    function ::= "function" identidier "()" "{" stmtlist "}"
+    function ::= "function" identidier "(" identifier ")" "{" stmtlist "}"
 
 
 
