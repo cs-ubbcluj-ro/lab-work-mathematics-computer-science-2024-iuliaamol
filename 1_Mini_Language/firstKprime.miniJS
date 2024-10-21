@@ -35,3 +35,22 @@ program primePrinter
     end;
 end
 
+
+
+#function
+
+function isPrime(num){
+ isPrime := true;
+        i := 2;
+        WHILE (i * i <= num)
+        begin
+            IF (num % i = 0)
+            begin
+                isPrime := false;
+            end;
+            i := i + 1;
+        end;
+        
+        IF (isPrime = true)
+            write(yes)
+}
