@@ -47,14 +47,8 @@ Language Specification:
     factor :: identifier | number_const | bool_const | "(" expression ")"
 
 
-    
-    
-    
-    
-
-
-
-
+#user defined type
+    function ::= "function" identidier "()" "{" stmtlist "}"
 
 
 
