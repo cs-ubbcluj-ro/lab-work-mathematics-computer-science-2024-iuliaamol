@@ -1,0 +1,23 @@
+"""
+FA.in File Format (EBNF):
+
+FA = "states:" state_list,
+     "alphabet:" alphabet_list,
+     "transitions:" transition_list,
+     "start:" start_state,
+     "final_states:" final_state_list;
+
+state_list = state, { " " , state };
+alphabet_list = symbol, { " " , symbol };
+transition_list = transition, { ", " , transition };
+final_state_list = state, { " " , state };
+
+transition = state, " ", symbol, " ", state;
+
+state = letter, { letter | digit };
+symbol = letter | digit;
+start_state = state;
+
+letter = "a" | "b" | ... | "z" | "A" | "B" | ... | "Z";
+digit = "0" | "1" | ... | "9";
+"""
