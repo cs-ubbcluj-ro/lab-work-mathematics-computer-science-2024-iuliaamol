@@ -17,16 +17,16 @@ Types in miniJS can either be "int" (integer) or "bool" (boolean).
 #Statements
 The <stmtlist> represents a sequence of statements.
 Each statement can be an assignment, an input/output statement (read/write), a conditional (if), or a loop (while).
-Each statement must end with a semicolon. The possible types of statements are defined under <stmt>:
-- <assignment>: The form <identifier> ":=" <expression>
-- <iostmt>: 
-- <ifstmt>: evaluates a condition, if true executes a statement enclose in "begin" and "end"
-- <whilestmt>: evaluates a condition repeatedly, executing a block of statements as long as the condition is true.
 
-#Conditions and relational operations
-A condition is a comparision between two expressions, using <relational_op>, including (=,!=,>,<)
+#Expressions and Operators:
+<expression> supports arithmetic with +, and <term> includes * and %.
+Conditions use comparison operators like == and ===.
+  
+Identifiers and Constants:
+<identifier> follows the rule: starts with a <letter> and is followed by any combination of letters and digits.
+<int_const> represents non-negative integers.
+<bool_const> includes "true" and "false".
 
-#Expressions
-Used for calculations and conditions. 
-
+Relations:
+<relation> supports all comparison operators defined in the specification.
 
