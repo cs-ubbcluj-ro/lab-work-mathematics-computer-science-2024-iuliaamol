@@ -28,5 +28,5 @@ Identifiers and Constants:
 <bool_const> includes "true" and "false".
 
 Relations:
-<relation> supports all comparison operators defined in the specification.
+<relation_op> supports all comparison operators defined in the specification.
 
