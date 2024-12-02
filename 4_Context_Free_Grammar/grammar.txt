@@ -1,8 +1,8 @@
 # miniJS Grammar
-# This file defines the context-free grammar (CFG) for the miniJS language.
-# It is written using Backus-Naur Form (BNF) notation.
+# This file defines the context-free grammar for the miniJS language.
+# It is written BNF .
 
-# Top-level rule: Program structure
+# Program structure
 <program> ::= "program" <identifier> <declist> <stmtlist> "end"
 
 # Declarations
