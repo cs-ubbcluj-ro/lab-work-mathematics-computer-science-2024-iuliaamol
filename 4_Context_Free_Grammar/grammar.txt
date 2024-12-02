@@ -3,44 +3,44 @@
 
 
 # Program structure
-<program> ::= "program" <identifier> <declist> <stmtlist> "end"
+<program> -> "program" <identifier> <declist> <stmtlist> "end"
 
 # Declarations
-<declist> ::= <declaration> ";" <declist> | <declaration> ";"
-<declaration> ::= "var" <identifier> ":" <type>
-<type> ::= "int" | "bool"
+<declist> -> <declaration> ";" <declist> | <declaration> ";"
+<declaration> -> "var" <identifier> ":" <type>
+<type> -> "int" | "bool"
 
 # Statements
-<stmtlist> ::= <stmt> ";" <stmtlist> | <stmt> ";"
-<stmt> ::= <assignment> | <iostmt> | <ifstmt> | <whilestmt>
+<stmtlist> -> <stmt> ";" <stmtlist> | <stmt> ";"
+<stmt> -> <assignment> | <iostmt> | <ifstmt> | <whilestmt>
 
 # Assignment statement
-<assignment> ::= <identifier> ":=" <expression> ";"
+<assignment> -> <identifier> ":=" <expression> ";"
 
 # Input/Output statements
-<iostmt> ::= "read" "(" <identifier> ")" ";" 
-           | "write" "(" <expression> ")" ";"
+<iostmt> -> "read" "(" <identifier> ")" ";" 
+         | "write" "(" <expression> ")" ";"
 
 # Conditional and loop statements
-<ifstmt> ::= "IF" "(" <condition> ")" "begin" <stmtlist> "end"
-<whilestmt> ::= "WHILE" "(" <condition> ")" "begin" <stmtlist> "end"
+<ifstmt> -> "IF" "(" <condition> ")" "begin" <stmtlist> "end"
+<whilestmt> -> "WHILE" "(" <condition> ")" "begin" <stmtlist> "end"
 
 # Conditions
-<condition> ::= <expression> <relational_op> <expression>
-<relational_op> ::= "=" | "!=" | "<" | "<=" | ">" | ">="
+<condition> -> <expression> <relational_op> <expression>
+<relational_op> -> "=" | "!=" | "<" | "<=" | ">" | ">="
 
 # Expressions
-<expression> ::= <term> | <expression> "+" <term> | <expression> "-" <term>
-<term> ::= <factor> | <term> "*" <factor> | <term> "%" <factor>
-<factor> ::= <identifier> | <number_const> | <bool_const> | "(" <expression> ")"
+<expression> -> <term> | <expression> "+" <term> | <expression> "-" <term>
+<term> -> <factor> | <term> "*" <factor> | <term> "%" <factor>
+<factor> -> <identifier> | <number_const> | <bool_const> | "(" <expression> ")"
 
 # User-defined functions
-<function> ::= "function" <identifier> "(" <identifier> ")" "{" <stmtlist> "}"
+<function> -> "function" <identifier> "(" <identifier> ")" "{" <stmtlist> "}"
 
 # Identifiers and constants
-<identifier> ::= <letter> {<letter> | <digit>}
-<letter> ::= "a" | "b" | ... | "z"
-<digit> ::= "0" | "1" | ... | "9"
-<number_const> ::= "0" | <non_zero_digit> {<digit>}
-<non_zero_digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-<bool_const> ::= "true" | "false"
+<identifier> -> <letter> {<letter> | <digit>}
+<letter> -> "a" | "b" | ... | "z"
+<digit> -> "0" | "1" | ... | "9"
+<number_const> -> "0" | <non_zero_digit> {<digit>}
+<non_zero_digit> -> "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<bool_const> -> "true" | "false"
