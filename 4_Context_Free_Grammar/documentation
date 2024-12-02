@@ -22,11 +22,11 @@ Each statement can be an assignment, an input/output statement (read/write), a c
 <expression> supports arithmetic with +, and <term> includes * and %.
 Conditions use comparison operators like == and ===.
   
-Identifiers and Constants:
+#Identifiers and Constants:
 <identifier> follows the rule: starts with a <letter> and is followed by any combination of letters and digits.
 <int_const> represents non-negative integers.
 <bool_const> includes "true" and "false".
 
-Relations:
+#Relations:
 <relation_op> supports all comparison operators defined in the specification.
 
