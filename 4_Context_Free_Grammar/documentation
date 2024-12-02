@@ -1,1 +1,32 @@
+This document explains the context-free grammar (CFG) used to parse and define the miniJS language.
+The grammar is presented in BNF,
+where non-terminal symbols are in  "< >",
+and terminal symbols (keywords and operators) are represented directly as text. 
+
+#Top Level structure
+The entry point of a miniJS program is the <program>.
+A valid program begins with the keyword "program", 
+followed by the program’s identifier (name), a list of variable declarations (<declist>),
+a list of statements (<stmtlist>), and finally, ends with the keyword "end".
+
+#Declarations
+Are specified in the <declist>.
+Each declaration begins with the keyword "var", followed by an <identifier> (the variable name) and a type (<type>).
+Types in miniJS can either be "int" (integer) or "bool" (boolean).
+
+#Statements
+The <stmtlist> represents a sequence of statements.
+Each statement can be an assignment, an input/output statement (read/write), a conditional (if), or a loop (while).
+Each statement must end with a semicolon. The possible types of statements are defined under <stmt>:
+- <assignment>: The form <identifier> ":=" <expression>
+- <iostmt>: 
+- <ifstmt>: evaluates a condition, if true executes a statement enclose in "begin" and "end"
+- <whilestmt>: evaluates a condition repeatedly, executing a block of statements as long as the condition is true.
+
+#Conditions and relational operations
+A condition is a comparision between two expressions, using <relational_op>, including (=,!=,>,<)
+
+#Expressions
+Used for calculations and conditions. 
+
 
