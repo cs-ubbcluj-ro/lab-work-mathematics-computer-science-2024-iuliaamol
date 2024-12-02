@@ -24,7 +24,7 @@ Conditions use comparison operators like == and ===.
   
 #Identifiers and Constants:
 <identifier> follows the rule: starts with a <letter> and is followed by any combination of letters and digits.
-<int_const> represents non-negative integers.
+<number_const> represents non-negative integers.
 <bool_const> includes "true" and "false".
 
 #Relations:
